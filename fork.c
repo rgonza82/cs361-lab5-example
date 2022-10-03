@@ -13,6 +13,7 @@ int main(int argc, char **argv) {
 	int child_status, result;
 	printf("%s\n",environ[0]);
 	result = fork();
+	// printf("pid: %d\n", getpid()); 	 NOT SURE THIS IS RIGHT  
 	if (result < 0) {
 		perror("fork failed");
 		exit(1);
